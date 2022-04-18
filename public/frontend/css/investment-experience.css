@@ -1,0 +1,205 @@
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 100%;
+    font-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #22262A;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.container, .modal-container, .container-lg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.overline {
+    font-size: 18px;
+    color: #646769;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.font-style-italic {
+    font-style: italic;
+}
+
+.mb-150 {
+    margin-bottom: 1.5rem;
+}
+.mt-0 {
+    margin-top: 0rem;
+    margin-bottom: 60px;
+    font-size: 20px;
+}
+
+.line-height-150 {
+    line-height: 1.5;
+}
+.mt-50, .placeholder-text {
+    margin-top: 0.5rem;
+}
+.heading-2 {
+    font-size: 48px;
+    line-height: 1;
+    font-family: "Poppins", sans-serif;
+    color: #22262A;
+    font-weight: bold;
+}
+.questionnaire-content .field__label {
+    color: #646769;
+    letter-spacing: 1.5px;
+}
+.field__label {
+    color: #22262A;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+.input {
+    align-items: center;
+    height: 3em;
+    padding: 8px 1em;
+    vertical-align: middle;
+    display: flex;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #c7ccd1;
+    border-top-color: #b9bfc6;
+    border-radius: 3px;
+    color: #22262A;
+    transition: 0.15s all ease;
+    font-size: large;
+}
+.text-align-right-lg {
+    text-align: right;
+}
+
+.width-100 {
+    width: 100%;
+}
+.formdiv {
+    width: 60%;
+    /* left: 50%; */
+    /* top: 50%; */
+    margin-left: 30%;
+    margin-top: 10%;
+}
+.button {
+    position: relative;
+    align-items: center;
+    height: 3em;
+    padding: 2.5em;
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    color: #4C4C4C;
+    cursor: pointer;
+    background-color: #e7e7e7;
+    border: 1px solid #D3D4D4;
+    border-radius: 2px;
+    letter-spacing: 0.03em;
+    transition: 0.15s all ease;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-right: -36px;
+}
+.mt-25 {
+    margin-top: 0.25rem;
+}
+.button-group-dual {
+    float: right;
+}
+.radio-checkbox-item-large label {
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    padding-left: 40px;
+    display: inline-block;
+}
+ul, ol {
+    list-style-type: none;
+}
+.radio-checkbox-item-large {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.heading-text-color {
+    color: #22262A;
+}
+.radio-checkbox-item-large label .mask {
+    display: block;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    top: 50%;
+    left: 1rem;
+    margin-top: -12px;
+    background: #fff;
+    border: 1px solid #b9bfc6;
+    border-top: 1px solid #9da6af;
+    transition: 0.25s all ease;
+    flex-shrink: 0;
+}
+.radio-checkbox-item-large label {
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    padding-left: 40px;
+    display: inline-block;
+}
+.pl-100 {
+    padding-left: 1rem;
+}
+.rounded-top, .radio-checkbox-item-large:first-child {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.bt, .vertical-section-100 + .vertical-section-100, .radio-checkbox-item-large:first-child {
+    border-top: 1px solid #e3e6e8;
+}
+.br, .radio-checkbox-item-large {
+    border-right: 1px solid #e3e6e8;
+}
+.bl, .radio-checkbox-item-large {
+    border-left: 1px solid #e3e6e8;
+}
+.bb, .radio-checkbox-item-large {
+    border-bottom: 1px solid #e3e6e8;
+}
+.radio-checkbox-item-large {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.radio-checkbox-item-large label [type=radio] ~ .mask {
+    border-radius: 50%;
+}
+
+.gamma, .radio-checkbox-item-large label .mask, .statistic__value {
+    font-size: 24px;
+}
+.radio-checkbox-item-large label .mask {
+    display: block;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    top: 50%;
+    left: 1rem;
+    margin-top: -12px;
+    background: #fff;
+    border: 1px solid #b9bfc6;
+    border-top: 1px solid #9da6af;
+    transition: 0.25s all ease;
+    flex-shrink: 0;
+}
