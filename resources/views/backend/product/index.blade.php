@@ -18,24 +18,18 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <table class="table table-responsive">
+                        <table id="product_table" class="table table-responsive">
                             <thead>
                                 <tr>
                                     <th>Sr.No.</th>
                                     <th>Title</th>
                                     <th>Category</th>
                                     <th>Price</th>
+                                    <th>status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Sr.No.</td>
-                                    <td>Title</td>
-                                    <td>Category</td>
-                                    <td>Price</td>
-                                    <td>Action</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -54,10 +48,10 @@
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.5/datatables.min.js"></script>
     <script>
         $(document).ready(function() {
-            var table = $('#plus_table').DataTable({
+            var table = $('#product_table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('backend.news.index') }}",
+                ajax: "{{ route('backend.product.index') }}",
                 buttons: [
                     {
                         extend: 'collection',
@@ -73,9 +67,10 @@
                 ],
                 columns: [
                     {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-                    {data: 'language', name: 'language'},
-                    {data: 'subject', name: 'subject'},
-                    {data: 'topic', name: 'topic'},
+                    {data: 'title', name: 'title'},
+                    {data: 'price', name: 'price'},
+                    {data: 'category', name: 'category'},
+                    {data: 'status', name: 'status'},
                     {data: 'action', name: 'action'},
                 ]
             });

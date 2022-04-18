@@ -8,12 +8,30 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use Yajra\DataTables\DataTables;
 
 class ProductController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
+        if ($request->ajax()){
+            $plus = Product::all();
+            return DataTables::of($plus)
+                ->addIndexColumn()
+                ->editColumn('status',function ($row){
+                    $status_color =  $row->status==1?'success':'danger';
+                    $status = $row->status==1?"Active":"InActive";
+                    return '<span class="badge bg-'.$status_color.'">'.$status.'</span>';
+                })
+                ->addColumn('action', function($row){
+                    $btn = '<a href="'.route('backend.product.edit',$row).'" class="edit btn btn-primary btn-sm">Edit</a>';
+                    $btn .= '<a href="'.route('backend.product.destroy',$row).'" class="edit btn btn-danger btn-sm ms-2">Delete</a>';
+                    return $btn;
+                })
+                ->rawColumns(['status','action'])
+                ->make(true);
+        }
         return view('backend.product.index');
     }
 
