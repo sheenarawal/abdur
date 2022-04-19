@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+}
+html body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+.container {
+    max-width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+}
+.mb-3 {
+    font-size: 16px;
+    text-align: start;
+}
+.mb-4 {
+    font-size: 16px;
+    text-align: start;
+    font-style: italic;
+}
+input#exampleInputEmail1 {
+    align-items: start;
+    height: 3em;
+    padding: 0 1em;
+    vertical-align: middle;
+    background: #fff;
+    border: 1px solid #c7ccd1;
+    border-top-color: #b9bfc6;
+    border-radius: 3px;
+    color: #22262A;
+    transition: 0.15s all ease;
+    font-family: 'Poppins', sans-serif;
+    max-width: 100%;
+}
+.btn {
+    position: relative;
+    align-items: center;
+    height: 3em;
+    padding: 0 2em;
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    color: #4C4C4C;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #D3D4D4;
+    border-radius: 2px;
+    letter-spacing: 0.03em;
+    transition: 0.15s all ease;
+    text-transform: uppercase;
+    float: right;
+    
+}
+label {
+    float: left;
+    margin-top: 35px;
+}
+h2.mb-10 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+.p-5 {
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 35px;
+    padding-bottom: 30px;
+}
+@media (max-width: 480px) {
+    .p-5   {
+    margin-top: 15%; margin-left: 0%; margin-right: 0%; margin-bottom: 0px; padding-bottom: 0px;
+}
+h2.mb-10 {
+    font-size: 28px;
+}
+label{
+    font-size: 16px;
+}
+.btn {
+    font-size: 16px !important;
+}
+}
+
+label.form-check-label {
+    margin-top: -3px;
+    margin-left: 20px;
+}
+.form-check {
+    position: relative;
+    display: block;
+    padding-left: 1.25rem;
+    margin-top: 6%;
+}

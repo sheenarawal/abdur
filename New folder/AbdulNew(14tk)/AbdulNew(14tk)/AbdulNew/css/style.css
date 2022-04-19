@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 100%;
+    font-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #22262A;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.btn {
+    color: #fff;
+    background-color: #F4633A;
+    border-color: #F4633A;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(61, 61, 61, 0.5) !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px !important;
+    display: block;
+    backface-visibility: hidden;
+    background-color: #fff;
+    padding: 20px;
+    z-index: 5000;
+}
+.navbar-toggler-icon {
+    color: #22262A !important;
+}
+.container {
+    margin-top: 8%;
+}
+.heading {
+    font-size: 22px;
+    color: #646769;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.ptag {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    margin-top: 0rem;
+    font-size: 20px;
+}
+.heading2 {
+    font-size: 52px;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+    color: #22262A;
+    font-weight: bold;
+}
+.field__label{
+    color: #646769;
+    letter-spacing: 1.5px;
+    margin-top: 30px;
+}
+.input {
+    align-items: center;
+    height: 3em;
+    padding: 0 1em;
+    vertical-align: middle;
+    display: flex;
+    width: 80%;
+    background: #fff;
+    border: 1px solid #c7ccd1;
+    border-top-color: #b9bfc6;
+    border-radius: 3px;
+    color: #22262A;
+    transition: 0.15s all ease;
+    font-family: 'Poppins', sans-serif;
+}
+.button {
+    position: relative;
+    align-items: center;
+    height: 3em;
+    padding: 0 2em;
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    color: #4C4C4C;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #D3D4D4;
+    border-radius: 2px;
+    letter-spacing: 0.03em;
+    transition: 0.15s all ease;
+    text-transform: uppercase;
+    float: right;
+    margin-right: 221px;
+    margin-top: 50px;
+}
+.button:hover {
+    color: #fff;
+    background-color: #F4633A;
+    border-color: #F4633A;
+
+}
+.footer {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+footer p {
+    margin-top: 50px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+@media  (max-width: 767px) {
+    .heading {
+        font-size: 18px;
+    }
+    .ptag {
+        font-size: 16px;
+    }
+    .heading2 {
+        font-size: 32px;
+}
+.field__label {
+    font-size: 16px;
+}
+.input {
+    width: 100%;
+    font-size: 16px;
+}
+.button {
+    margin-right: 3px;
+    margin-top: 38px;
+    font-size: 16px;
+}
+
+}
+.form-group.col-md-6.float {
+    float: right;
+}
+form.label-mt-0 label {
+    margin-top: 0px !important;
+}

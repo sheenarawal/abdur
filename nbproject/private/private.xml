@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp1/htdocs/Abdul/routes/web.php</file>
+            <file>file:/C:/xampp1/htdocs/Abdul/resources/views/frontend/auth/register/investing-level.blade.php</file>
+            <file>file:/C:/xampp1/htdocs/Abdul/app/Http/Controllers/Auth/ProfileController.php</file>
+            <file>file:/C:/xampp1/htdocs/Abdul/resources/views/frontend/auth/register/investment.blade.php</file>
+            <file>file:/C:/xampp1/htdocs/Abdul/app/Http/Controllers/Auth/RegistrationController.php</file>
+            <file>file:/C:/xampp1/htdocs/Abdul/resources/views/frontend/auth/profile.blade.php</file>
+            <file>file:/C:/xampp1/htdocs/Abdul/resources/views/frontend/auth/register/social.blade.php</file>
+            <file>file:/C:/xampp1/htdocs/Abdul/resources/views/frontend/auth/register/account_type.blade.php</file>
+            <file>file:/C:/xampp1/htdocs/Abdul/resources/views/frontend/auth/register/password.blade.php</file>
+        </group>
+    </open-files>
+</project-private>
