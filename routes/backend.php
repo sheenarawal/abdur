@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(['middleware'=>['guest'],'as'=>'backend.'],function (){
-    Route::get('/login',[LoginController::class,'index'])->name('login');
+    Route::match(['get','post'],'/login',[LoginController::class,'index'])->name('login');
 });
 
 
@@ -23,6 +23,7 @@ Route::group(['middleware'=>['auth'],'as'=>'backend.'],function (){
     Route::resource('product',ProductController::class);
     Route::group(['prefix'=>'product','as'=>'product.'],function (){
         Route::get('edit/{product}',[ProductController::class,'edit'])->name('edit');
+        Route::post('update/{product}',[ProductController::class,'update'])->name('update');
     });
 
 

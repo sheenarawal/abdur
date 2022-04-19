@@ -44,6 +44,7 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+
         $valid = Validator::make($request->all(), [
             "title" => "required",
             "category" => "required",
@@ -62,7 +63,7 @@ class ProductController extends Controller
             "tags" =>$request->tag,
             "strategy" => $request->strategy,
             "price" => $request->price,
-            /*"address" => $request->address,*/
+            "address" => $request->address,
         ]);
         if ($file = $request->file('photo')){
             $name = $file->getClientOriginalName();
@@ -90,18 +91,54 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
-        //
+        $media = Media::where(['model_type' => 'App\Models\Product', 'model_id' => $product->id,])->get();
+        return view('backend.product.edit',compact('product','media'));
     }
 
 
     public function update(Request $request, Product $product)
     {
-        //
+        $valid = Validator::make($request->all(), [
+            "title" => "required",
+            "category" => "required",
+            "tag" => "required",
+            "strategy" => "required",
+            "price" => "required",
+            "address" => "required",
+        ]);
+        if ($valid->fails()){
+            return Redirect::back()->withErrors($valid->messages())->withInput();
+        }
+        $product->update([
+            "title" => $request->title,
+            "category" => $request->category,
+            "tags" =>$request->tag,
+            "strategy" => $request->strategy,
+            "price" => $request->price,
+            "address" => $request->address,
+        ]);
+        if ($file = $request->file('photo')){
+            $name = $file->getClientOriginalName();
+            $ext = $file->getClientOriginalExtension();
+            $size = $file->getSize();
+            $photo = 'upload/product/'.$name;
+            Storage::disk('public')->put($photo,file_get_contents($file));
+            Media::create([
+                'model_type' => 'App\Models\Product',
+                'model_id' => $product->id,
+                'type' => $ext,
+                'url' => $photo,
+                'file_name' => $name,
+                'size' => $size
+            ]);
+        }
+        return Redirect::route('backend.product.index')->with('success','Product Update successfully');
     }
 
 
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return Redirect::route('backend.product.index')->with('success','Product delete successfully');
     }
 }

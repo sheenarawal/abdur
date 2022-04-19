@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('price');
             $table->string('strategy')->nullable();
             $table->string('status')->default(0);
-            $table->timestamp('deleted_at')->nullable(0);
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
     }
