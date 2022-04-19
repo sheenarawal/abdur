@@ -68,7 +68,6 @@ class RegistrationController extends Controller
         if ($request->all()){
 
             $valid = Validator::make($request->all(),[
-                'email'=>'required|email|unique:users',
                 'age'=>'required|numeric|min:18',
             ]);
             if ($valid->fails())
@@ -89,9 +88,7 @@ class RegistrationController extends Controller
 
             $valid = Validator::make($request->all(),[
                 'investing_level'=>'required',
-
-            ],
-                    [ 'investing_level.required' => 'Please select atleast one level']);
+            ], [ 'investing_level.required' => 'Please select atleast one level']);
             if ($valid->fails())
             {
                 return Redirect::back()->withErrors($valid->messages())->withInput();
@@ -110,10 +107,8 @@ class RegistrationController extends Controller
         if ($request->all()){
 
             $valid = Validator::make($request->all(),[
-                'source'=>'required',
-
-            ],
-                    [ 'source.required' => 'Please select atleast one investing advice source']);
+                'source'=>'required',], [ 'source.required' => 'Please select atleast one investing advice source']
+            );
             if ($valid->fails())
             {
                 return Redirect::back()->withErrors($valid->messages())->withInput();
@@ -130,11 +125,10 @@ class RegistrationController extends Controller
 
         if ($request->all()){
 
-            $valid = Validator::make($request->all(),[
-                'motivation'=>'required',
-
-            ],
-                    [ 'motivation.required' => 'Please select atleast one reason']);
+            $valid = Validator::make($request->all(),
+                ['motivation'=>'required',],
+                [ 'motivation.required' => 'Please select atleast one reason']
+            );
             if ($valid->fails())
             {
                 return Redirect::back()->withErrors($valid->messages())->withInput();
@@ -151,11 +145,10 @@ class RegistrationController extends Controller
 
         if ($request->all()){
 
-            $valid = Validator::make($request->all(),[
-                'duration'=>'required',
-
-            ],
-                    [ 'duration.required' => 'Please select atleast one invesment year']);
+            $valid = Validator::make($request->all(),
+                ['duration'=>'required',],
+                [ 'duration.required' => 'Please select atleast one invesment year']
+            );
             if ($valid->fails())
             {
                 return Redirect::back()->withErrors($valid->messages())->withInput();
@@ -276,7 +269,14 @@ class RegistrationController extends Controller
                 return Redirect::back()->withErrors($valid->messages())->withInput();
             }
             $user = User::where('id',Auth::id())->update(
-                ['address1'=>$request->address1,'address2'=>$request->address2,'state'=>$request->state,'city'=>$request->city,'zip_code'=>$request->zip_code,'mobile'=>$request->mobile]
+                [
+                    'address1'=>$request->address1,
+                    'address2'=>$request->address2,
+                    'state'=>$request->state,
+                    'city'=>$request->city,
+                    'zip_code'=>$request->zip_code,
+                    'mobile'=>$request->mobile
+                ]
             );
             return Redirect::route('register.social');
         }
@@ -312,7 +312,6 @@ class RegistrationController extends Controller
         if ($request->all()){
 
             $valid = Validator::make($request->all(),[
-
 
             ],
              );

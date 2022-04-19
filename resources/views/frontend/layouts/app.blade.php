@@ -55,7 +55,7 @@
 
 
 <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container my-5">
+<div class="row my-5">
     <!-- Footer -->
     <footer class="text-justify text-lg-start text-white" style="background-color: #000; width: 100%;">
         <!-- Grid container -->

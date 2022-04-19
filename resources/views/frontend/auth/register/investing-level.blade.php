@@ -14,41 +14,48 @@
             <span class="text-danger form-text">{{$message}}</span>
             @enderror
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="investing_level" id="investing_level2" value="novice">
+                <input class="form-check-input" type="radio" name="investing_level" id="investing_level2"
+                       value="novice">
                 <label class="form-check-label" for="investing_level2">
                     Novice
                 </label>
             </div>
             <br>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="investing_level" id="investing_level2" value="beginner">
+                <input class="form-check-input" type="radio" name="investing_level" id="investing_level2"
+                       value="beginner">
                 <label class="form-check-label" for="investing_level2">
                     Beginner
                 </label>
-            </div><br>
+            </div>
+            <br>
 
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="investing_level" id="investing_level2" value="competent">
+                <input class="form-check-input" type="radio" name="investing_level" id="investing_level2"
+                       value="competent">
                 <label class="form-check-label" for="investing_level2">
                     Competent
                 </label>
             </div>
             <br>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="investing_level" id="investing_level2" value="proficient">
+                <input class="form-check-input" type="radio" name="investing_level" id="investing_level2"
+                       value="proficient">
                 <label class="form-check-label" for="investing_level2">
                     Proficient
                 </label>
             </div>
             <br>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="investing_level" id="investing_level2" value="expert">
+                <input class="form-check-input" type="radio" name="investing_level" id="investing_level2"
+                       value="expert">
                 <label class="form-check-label" for="investing_level2">
                     Expert
                 </label>
             </div>
             <br>
-            <button type="submit" class="btn btn-primary">CONTINUE</button><br>
+            <button type="submit" class="btn btn-dark">CONTINUE</button>
+            <br>
 
         </form>
     </div>
@@ -56,4 +63,3 @@
 
 @stack('styles')
 <link rel="stylesheet" href="{{asset('frontend/css/investing-level.css')}}">
- 
