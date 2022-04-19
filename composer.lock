@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b69124f08de7bc5c9fa56a0b6b979cde",
+    "content-hash": "7249aaaa061956fda3b984c4eaadfddf",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -5690,6 +5690,7 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.10.0"
             },
             "time": "2021-03-09T10:59:23+00:00"
+
         },
         {
             "name": "yajra/laravel-datatables-oracle",
@@ -5775,6 +5776,7 @@
                 }
             ],
             "time": "2022-04-07T00:59:50+00:00"
+
         }
     ],
     "packages-dev": [

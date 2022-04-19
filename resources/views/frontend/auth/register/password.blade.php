@@ -1,6 +1,8 @@
 @extends('frontend.layouts.app')
 
 @section('frontend_content')
+    <div class="p-5 text-justify bg-light"
+         style="margin-top: 10%; margin-left: 30%; margin-right: 30%; margin-bottom: 35px; padding-bottom: 30px;">
     <form action="{{route('register.password')}}" method="post">
         @csrf
         <p class="overline delta">Password</p>
@@ -17,7 +19,8 @@
                             <div class="field__input">
                                 <input type="hidden" name="email" value="{{isset($email)?$email:''}}">
                                 <div data-v-70e4fdaa="" class="display-flex align-items-center position-relative">
-                                    <input data-v-70e4fdaa="" data-test="password" placeholder="" name="password" type="password" class="input @error('password') is-invalid @enderror">
+                                    <input data-v-70e4fdaa="" data-test="password" placeholder="" name="password" type="password" class="form-control input @error('password') is-invalid @enderror">
+
                                     <svg data-v-70e4fdaa="" version="1.1" viewBox="0 0 24 24" class="user-creation-form__password-icon position-absolute svg-icon svg-fill" style="width: 23px; height: 23px;">
                                         <defs>
                                             <path pid="0" d="M11 .5C6 .5 1.73 3.61 0 8c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5C20.27 3.61 16 .5 11 .5zM11 13c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8C9.34 5 8 6.34 8 8s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" id="svgicon_view_a">
@@ -58,8 +61,10 @@
         </div>
     </form>
 @stop
+@stack('styles')
+<link rel="stylesheet" href="{{asset('frontend/css/password.css')}}">
 @push('frontend_css')
-    <link rel="stylesheet" href="{{asset('frontend/css/password.css')}}">
+
     <style>
         .is-invalid{
             border-color: #dc3545;
